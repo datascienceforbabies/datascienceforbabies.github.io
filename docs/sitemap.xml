@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>localhost/posts/examplepost/</loc>
+    <loc>datascienceforbabies/posts/examplepost/</loc>
     <lastmod>2022-11-11T12:10:00-05:00</lastmod>
   </url><url>
-    <loc>localhost/</loc>
+    <loc>datascienceforbabies/</loc>
     <lastmod>2022-11-11T12:10:00-05:00</lastmod>
   </url><url>
-    <loc>localhost/posts/</loc>
+    <loc>datascienceforbabies/posts/</loc>
     <lastmod>2022-11-11T12:10:00-05:00</lastmod>
   </url><url>
-    <loc>localhost/tags/</loc>
+    <loc>datascienceforbabies/tags/</loc>
     <lastmod>2022-11-11T12:10:00-05:00</lastmod>
   </url><url>
-    <loc>localhost/tags/untagged/</loc>
+    <loc>datascienceforbabies/tags/untagged/</loc>
     <lastmod>2022-11-11T12:10:00-05:00</lastmod>
   </url><url>
-    <loc>localhost/blog/</loc>
+    <loc>datascienceforbabies/blog/</loc>
   </url><url>
-    <loc>localhost/series/</loc>
+    <loc>datascienceforbabies/series/</loc>
   </url>
 </urlset>
