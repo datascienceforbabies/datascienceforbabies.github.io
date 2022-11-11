@@ -1,4 +1,4 @@
-baseurl      = "datascienceforbabies.github.io"
+baseurl      = "http://datascienceforbabies.com"
 title        = "My Blog"
 languageCode = "en-us"
 theme        = "hello-friend-ng"
