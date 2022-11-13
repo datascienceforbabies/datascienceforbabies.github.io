@@ -12,7 +12,7 @@ publishDir   = "docs"
   dateformNumTime = "2006-01-02 15:04"
 
   # Subtitle for home
-  homeSubtitle = "Data Science, Statistics, and Computer Science help for anyone seeking to learn more"
+  homeSubtitle = "Data Science, Statistics, and Computer Science help for beginners"
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
