@@ -59,8 +59,20 @@ Optimization</description>
             <pubDate>Fri, 11 Nov 2022 12:10:00 -0500</pubDate>
             
             <guid>http://datascienceforbabies.com/posts/examplepost/</guid>
-            <description>Hello! Here is the first ever post on datascienceforbabies.com!!</description>
+            <description>Hello! Here is the first ever post on datascienceforbabies.com!!
+Above is a test of inserting an image.
+# break dataframes into test and training - this way the test data is completely new (80/20 split) aqu_train = aqu.sample(frac=0.8, random_state=25) aqu_test = aqu.drop(aqu_train.index) bel_train = bel.sample(frac=0.8, random_state=25) bel_test = bel.drop(bel_train.index) sar_train = sar.sample(frac=.8, random_state=25) sar_test = sar.drop(sar_train.index) Above is a test of inserting code.</description>
             <content type="html"><![CDATA[<p>Hello! Here is the first ever post on datascienceforbabies.com!!</p>
+<p><img src="/pexels-photo-268533.webp" alt="Yellow Duck" title="Yellow Duck"></p>
+<p>Above is a test of inserting an image.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>  # break dataframes into test and training - this way the test data is completely new (80/20 split)
+</span></span><span style="display:flex;"><span>  aqu_train =  aqu.sample(frac=0.8, random_state=25)
+</span></span><span style="display:flex;"><span>  aqu_test = aqu.drop(aqu_train.index)
+</span></span><span style="display:flex;"><span>  bel_train = bel.sample(frac=0.8, random_state=25)
+</span></span><span style="display:flex;"><span>  bel_test = bel.drop(bel_train.index)
+</span></span><span style="display:flex;"><span>  sar_train = sar.sample(frac=.8, random_state=25)
+</span></span><span style="display:flex;"><span>  sar_test = sar.drop(sar_train.index)
+</span></span></code></pre></div><p>Above is a test of inserting code.</p>
 ]]></content>
         </item>
         
