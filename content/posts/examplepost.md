@@ -10,7 +10,7 @@ tags:
 
 Hello! Here is the first ever post on datascienceforbabies.com!!
 
-{{< image src="C:\Users\Rachel\Pictures\Engagement_Photos\highlights\rachel-and-will-engagement.jpg" alt="Picture from photoshoot" position="center" style="border-radius: 8px;" >}}
+![Yellow Duck](/pexels-photo-268533.webp 'Yellow Duck')
 
 Above is a test of inserting an image.
 

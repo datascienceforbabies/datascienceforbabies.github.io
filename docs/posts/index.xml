@@ -45,7 +45,7 @@ Above is a test of inserting an image.
 # break dataframes into test and training - this way the test data is completely new (80/20 split) aqu_train = aqu.sample(frac=0.8, random_state=25) aqu_test = aqu.drop(aqu_train.index) bel_train = bel.sample(frac=0.8, random_state=25) bel_test = bel.drop(bel_train.index) sar_train = sar.sample(frac=.8, random_state=25) sar_test = sar.drop(sar_train.index) Above is a test of inserting code.</description>
             <content type="html"><![CDATA[<p>Hello! Here is the first ever post on datascienceforbabies.com!!</p>
 
-    <img src="C:%5c%5cUsers%5c%5cRachel%5c%5cPictures%5c%5cEngagement_Photos%5c%5chighlights%5c%5crachel-and-will-engagement.jpg"  alt="Picture from photoshoot"  class="center"  style="border-radius: 8px;"  />
+    <img src="C:%5cUsers%5cRachel%5cPictures%5cEngagement_Photos%5chighlights%5crachel-and-will-engagement.jpg"  alt="Picture from photoshoot"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>Above is a test of inserting an image.</p>
