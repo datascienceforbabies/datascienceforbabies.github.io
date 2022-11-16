@@ -2,16 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://datascienceforbabies.com/posts/buzzwords/</loc>
-    <lastmod>2022-11-13T11:39:45-05:00</lastmod>
-  </url><url>
     <loc>http://datascienceforbabies.com/</loc>
-    <lastmod>2022-11-13T11:39:45-05:00</lastmod>
+    <lastmod>2022-11-16T13:03:20-05:00</lastmod>
+  </url><url>
+    <loc>http://datascienceforbabies.com/tags/data_science/</loc>
+    <lastmod>2022-11-16T13:03:20-05:00</lastmod>
+  </url><url>
+    <loc>http://datascienceforbabies.com/tags/eve_schoenrock/</loc>
+    <lastmod>2022-11-16T13:03:20-05:00</lastmod>
   </url><url>
     <loc>http://datascienceforbabies.com/posts/</loc>
-    <lastmod>2022-11-13T11:39:45-05:00</lastmod>
+    <lastmod>2022-11-16T13:03:20-05:00</lastmod>
+  </url><url>
+    <loc>http://datascienceforbabies.com/posts/standard-error-v-standard-deviation/</loc>
+    <lastmod>2022-11-16T13:03:20-05:00</lastmod>
+  </url><url>
+    <loc>http://datascienceforbabies.com/tags/statistics/</loc>
+    <lastmod>2022-11-16T13:03:20-05:00</lastmod>
   </url><url>
     <loc>http://datascienceforbabies.com/tags/</loc>
+    <lastmod>2022-11-16T13:03:20-05:00</lastmod>
+  </url><url>
+    <loc>http://datascienceforbabies.com/posts/buzzwords/</loc>
     <lastmod>2022-11-13T11:39:45-05:00</lastmod>
   </url><url>
     <loc>http://datascienceforbabies.com/tags/untagged/</loc>
