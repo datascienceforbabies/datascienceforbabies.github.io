@@ -9,3 +9,19 @@ tags:
 ---
 
 Hello! Here is the first ever post on datascienceforbabies.com!!
+
+![Yellow Duck](/pexels-photo-268533.webp 'Yellow Duck')
+
+Above is a test of inserting an image.
+
+``` html
+  # break dataframes into test and training - this way the test data is completely new (80/20 split)
+  aqu_train =  aqu.sample(frac=0.8, random_state=25)
+  aqu_test = aqu.drop(aqu_train.index)
+  bel_train = bel.sample(frac=0.8, random_state=25)
+  bel_test = bel.drop(bel_train.index)
+  sar_train = sar.sample(frac=.8, random_state=25)
+  sar_test = sar.drop(sar_train.index)
+```
+
+Above is a test of inserting code.
