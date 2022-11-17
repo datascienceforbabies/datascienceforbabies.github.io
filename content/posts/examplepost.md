@@ -31,15 +31,13 @@ Above is a test of inserting code.
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <py-env>
   - numpy
-  - matplotlib
 </py-env>
-<b>pyscript REPL (numpy and matplotlib are installed)</b>
+<b>pyscript REPL (numpy is installed)</b>
 <br>
 <div>
   <div>
     <py-repl id="my-repl" auto-generate="true" std-out="output" std-err="output">
 import numpy as np
-from matplotlib import pyplot as plt
 print("Hello, world!")
     </py-repl>
   </div>
