@@ -51,3 +51,7 @@ publishDir   = "docs"
     identifier = "blog"
     name       = "Blog"
     url        = "/posts"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true

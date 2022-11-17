@@ -25,3 +25,36 @@ Above is a test of inserting an image.
 ```
 
 Above is a test of inserting code.
+
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.css" />
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<py-env>
+  - numpy
+</py-env>
+<b>pyscript REPL (numpy is installed)</b>
+<br>
+<div>
+  <div>
+    <py-repl id="my-repl" auto-generate="true" std-out="output" std-err="output">
+import numpy as np
+print("Hello, world!")
+    </py-repl>
+  </div>
+  <div style="justify-content: right;display: flex;align-items: right;">
+    <button class="button_reset" type="button">Clear Output</button>
+  </div>
+  <b>Output:</b>
+  <div style="justify-content: center;display: flex;align-items: center;">
+    <div id="output" style="width: 100%;margin: 2rem;"></div>
+  </div>
+  <script src="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.js"></script>
+</div>
+
+Above is a test of inserting runnable code.
+
+{{< highlight python>}}
+print("Hello, world!")
+{{< /highlight >}}
+
+Above is a test of inserting highlighted code.
