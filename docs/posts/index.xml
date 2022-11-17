@@ -6,8 +6,27 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sun, 13 Nov 2022 11:39:45 -0500</lastBuildDate>
+        <lastBuildDate>Wed, 16 Nov 2022 13:03:20 -0500</lastBuildDate>
         <atom:link href="http://datascienceforbabies.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Standard Error v. Standard Deviation</title>
+            <link>http://datascienceforbabies.com/posts/standard-error-v-standard-deviation/</link>
+            <pubDate>Wed, 16 Nov 2022 13:03:20 -0500</pubDate>
+            
+            <guid>http://datascienceforbabies.com/posts/standard-error-v-standard-deviation/</guid>
+            <description>What&amp;rsquo;s the difference between standard error and standard deviation? Every new data scientist asks this question of themselves. Honestly, the difference is nuanced, and standard error is a form of standard deviation.
+Standard Deviation is a measure of the variability within a sample - this can be a sample of a population or the entire population itself. A lower standard deviation indicates that values in a distribution tend closer toward the mean of that distribution, while high standard deviation suggests that values are dispersed more greatly from the mean.</description>
+            <content type="html"><![CDATA[<p>What&rsquo;s the difference between standard error and standard deviation? Every new data scientist asks this question of themselves. Honestly, the difference is nuanced, and standard error is a form of standard deviation.</p>
+<p>Standard Deviation is a measure of the variability within a sample - this can be a sample of a population or the entire population itself. A lower standard deviation indicates that values in a distribution tend closer toward the mean of that distribution, while high standard deviation suggests that values are dispersed more greatly from the mean.</p>
+<p>Standard Error is used in reference to variability across sample distributions. If you were to draw infinite repeated samples from the original population and take the mean of each sample, the standard deviation on the distribution of those sample means combined is the standard error. We compute the standard error as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>standard_deviation/sqrt(sample_size)
+</span></span></code></pre></div><p>The standard error on an estimation reflects how greatly that estimate varies under repeated sampling, which is why it is often used in the computation of confidence intervals. That being said, the 95% confidence interval on an estimate is calculated by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>confidence_interval = [estimate - 2*standard_error(estimate), estimate + 2*standard_error(estimate)]
+</span></span></code></pre></div><p>Most frequently, data scientists retrieve the value of standard_error(estimate) from the model output.</p>
+<p>By Eve Schoenrock</p>
+]]></content>
+        </item>
         
         <item>
             <title>Buzzwords</title>
@@ -43,7 +62,12 @@ Optimization</description>
             <description>Hello! Here is the first ever post on datascienceforbabies.com!!
 Above is a test of inserting an image.
 # break dataframes into test and training - this way the test data is completely new (80/20 split) aqu_train = aqu.sample(frac=0.8, random_state=25) aqu_test = aqu.drop(aqu_train.index) bel_train = bel.sample(frac=0.8, random_state=25) bel_test = bel.drop(bel_train.index) sar_train = sar.sample(frac=.8, random_state=25) sar_test = sar.drop(sar_train.index) Above is a test of inserting code.
-- numpy- matplotlibpyscript REPL (numpy and matplotlib are installed)import numpy as npfrom matplotlib import pyplot as pltprint(&#34;</description>
+- numpy
+- matplotlib
+pyscript REPL (numpy and matplotlib are installed)
+import numpy as np
+from matplotlib import pyplot as plt
+print(&#34;</description>
             <content type="html"><![CDATA[<p>Hello! Here is the first ever post on datascienceforbabies.com!!</p>
 <p><img src="/pexels-photo-268533.webp" alt="Yellow Duck" title="Yellow Duck"></p>
 <p>Above is a test of inserting an image.</p>
