@@ -6,8 +6,76 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Wed, 16 Nov 2022 13:03:20 -0500</lastBuildDate>
+        <lastBuildDate>Thu, 17 Nov 2022 16:08:51 -0500</lastBuildDate>
         <atom:link href="http://datascienceforbabies.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Basics of Slicing with Pandas</title>
+            <link>http://datascienceforbabies.com/posts/basics-of-slicing/</link>
+            <pubDate>Thu, 17 Nov 2022 16:08:51 -0500</pubDate>
+            
+            <guid>http://datascienceforbabies.com/posts/basics-of-slicing/</guid>
+            <description>A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&amp;rsquo;s important to know how to index into a dataframe and subset the dataframe.
+For the purposes of this article, I&amp;rsquo;ll be demonstrating slicing with the following pandas dataframe:
+- numpy- pandaspyscript REPL (numpy and pandas are installed)import numpy as npimport pandas as pddata = [[&amp;lsquo;red&amp;rsquo;, 22, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;red&amp;rsquo;, 2, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 5, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 31, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 14, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 12, &amp;lsquo;square&amp;rsquo;]]</description>
+            <content type="html"><![CDATA[<p>A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to index into a dataframe and subset the dataframe.</p>
+<p>For the purposes of this article, I&rsquo;ll be demonstrating slicing with the following pandas dataframe:</p>
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.css" />
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<py-env>
+  - numpy
+  - pandas
+</py-env>
+<b>pyscript REPL (numpy and pandas are installed)</b>
+<br>
+<div>
+  <div>
+    <py-repl id="my-repl" auto-generate="true" std-out="output" std-err="output">
+import numpy as np
+import pandas as pd
+<p>data = [[&lsquo;red&rsquo;, 22, &lsquo;round&rsquo;], [&lsquo;red&rsquo;, 2, &lsquo;square&rsquo;], [&lsquo;green&rsquo;, 5, &lsquo;round&rsquo;], [&lsquo;green&rsquo;, 31, &lsquo;square&rsquo;], [&lsquo;blue&rsquo;, 14, &lsquo;round&rsquo;], [&lsquo;blue&rsquo;, 12, &lsquo;square&rsquo;]]</p>
+<p>df = pd.DataFrame(data, columns=[&lsquo;Color&rsquo;, &lsquo;Number&rsquo;, &lsquo;Shape&rsquo;])</p>
+<p>df
+</py-repl></p>
+  </div>
+  <div style="justify-content: right;display: flex;align-items: right;">
+    <button class="button_reset" type="button">Clear Output</button>
+  </div>
+  <b>Output:</b>
+  <div style="justify-content: center;display: flex;align-items: center;">
+    <div id="output" style="width: 100%;margin: 2rem;"></div>
+  </div>
+  <script src="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.js"></script>
+</div>
+<p>The easiest way to take a slice of a dataframe is with brackets, []. This action selects rows of a dataframe based on what you put in the brackets. To select a single row, say the row at index value 3, you would run the following command:</p>
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.css" />
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<py-env>
+  - numpy
+  - pandas
+</py-env>
+<b>pyscript REPL (numpy and pandas are installed)</b>
+<br>
+<div>
+  <div>
+    <py-repl id="my-repl" auto-generate="true" std-out="output" std-err="output">
+df[3:4]
+    </py-repl>
+  </div>
+  <div style="justify-content: right;display: flex;align-items: right;">
+    <button class="button_reset" type="button">Clear Output</button>
+  </div>
+  <b>Output:</b>
+  <div style="justify-content: center;display: flex;align-items: center;">
+    <div id="output" style="width: 100%;margin: 2rem;"></div>
+  </div>
+  <script src="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.js"></script>
+</div>
+<p>Notice that to display one row, I had to enter two values: 3 and 4, separated by a colon. Slicing typically requires 2 values. The first value, before the colon, represents the beginning index of the slice and is inclusive. The second value, after the colon, represents the ending index of the slice and is exclusive. This is why our result is only row 3, and not rows 3 and 4.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Standard Error v. Standard Deviation</title>
@@ -62,12 +130,7 @@ Optimization</description>
             <description>Hello! Here is the first ever post on datascienceforbabies.com!!
 Above is a test of inserting an image.
 # break dataframes into test and training - this way the test data is completely new (80/20 split) aqu_train = aqu.sample(frac=0.8, random_state=25) aqu_test = aqu.drop(aqu_train.index) bel_train = bel.sample(frac=0.8, random_state=25) bel_test = bel.drop(bel_train.index) sar_train = sar.sample(frac=.8, random_state=25) sar_test = sar.drop(sar_train.index) Above is a test of inserting code.
-- numpy
-- matplotlib
-pyscript REPL (numpy and matplotlib are installed)
-import numpy as np
-from matplotlib import pyplot as plt
-print(&#34;</description>
+- numpypyscript REPL (numpy is installed)import numpy as npprint(&#34;</description>
             <content type="html"><![CDATA[<p>Hello! Here is the first ever post on datascienceforbabies.com!!</p>
 <p><img src="/pexels-photo-268533.webp" alt="Yellow Duck" title="Yellow Duck"></p>
 <p>Above is a test of inserting an image.</p>
@@ -84,15 +147,13 @@ print(&#34;</description>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <py-env>
   - numpy
-  - matplotlib
 </py-env>
-<b>pyscript REPL (numpy and matplotlib are installed)</b>
+<b>pyscript REPL (numpy is installed)</b>
 <br>
 <div>
   <div>
     <py-repl id="my-repl" auto-generate="true" std-out="output" std-err="output">
 import numpy as np
-from matplotlib import pyplot as plt
 print("Hello, world!")
     </py-repl>
   </div>
@@ -106,6 +167,8 @@ print("Hello, world!")
   <script src="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.js"></script>
 </div>
 <p>Above is a test of inserting runnable code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>)</span></span></code></pre></div>
+<p>Above is a test of inserting highlighted code.</p>
 ]]></content>
         </item>
         

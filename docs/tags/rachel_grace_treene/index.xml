@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>data_science on Data Science for Babies</title>
-    <link>http://datascienceforbabies.com/tags/data_science/</link>
-    <description>Recent content in data_science on Data Science for Babies</description>
+    <title>rachel_grace_treene on Data Science for Babies</title>
+    <link>http://datascienceforbabies.com/tags/rachel_grace_treene/</link>
+    <description>Recent content in rachel_grace_treene on Data Science for Babies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 17 Nov 2022 16:08:51 -0500</lastBuildDate><atom:link href="http://datascienceforbabies.com/tags/data_science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 16:08:51 -0500</lastBuildDate><atom:link href="http://datascienceforbabies.com/tags/rachel_grace_treene/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Basics of Slicing with Pandas</title>
       <link>http://datascienceforbabies.com/posts/basics-of-slicing/</link>
@@ -17,16 +17,6 @@
       <description>A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&amp;rsquo;s important to know how to index into a dataframe and subset the dataframe.
 For the purposes of this article, I&amp;rsquo;ll be demonstrating slicing with the following pandas dataframe:
 - numpy- pandaspyscript REPL (numpy and pandas are installed)import numpy as npimport pandas as pddata = [[&amp;lsquo;red&amp;rsquo;, 22, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;red&amp;rsquo;, 2, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 5, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 31, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 14, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 12, &amp;lsquo;square&amp;rsquo;]]</description>
-    </item>
-    
-    <item>
-      <title>Standard Error v. Standard Deviation</title>
-      <link>http://datascienceforbabies.com/posts/standard-error-v-standard-deviation/</link>
-      <pubDate>Wed, 16 Nov 2022 13:03:20 -0500</pubDate>
-      
-      <guid>http://datascienceforbabies.com/posts/standard-error-v-standard-deviation/</guid>
-      <description>What&amp;rsquo;s the difference between standard error and standard deviation? Every new data scientist asks this question of themselves. Honestly, the difference is nuanced, and standard error is a form of standard deviation.
-Standard Deviation is a measure of the variability within a sample - this can be a sample of a population or the entire population itself. A lower standard deviation indicates that values in a distribution tend closer toward the mean of that distribution, while high standard deviation suggests that values are dispersed more greatly from the mean.</description>
     </item>
     
   </channel>
