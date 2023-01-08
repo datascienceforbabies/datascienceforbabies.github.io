@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 16 Nov 2022 13:03:20 -0500</lastBuildDate><atom:link href="http://datascienceforbabies.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 16:08:51 -0500</lastBuildDate><atom:link href="http://datascienceforbabies.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basics of Slicing with Pandas</title>
+      <link>http://datascienceforbabies.com/posts/basics-of-slicing/</link>
+      <pubDate>Thu, 17 Nov 2022 16:08:51 -0500</pubDate>
+      
+      <guid>http://datascienceforbabies.com/posts/basics-of-slicing/</guid>
+      <description>A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&amp;rsquo;s important to know how to index into a dataframe and subset the dataframe.
+For the purposes of this article, I&amp;rsquo;ll be demonstrating slicing with the following pandas dataframe:
+- numpy- pandaspyscript REPL (numpy and pandas are installed)import numpy as npimport pandas as pddata = [[&amp;lsquo;red&amp;rsquo;, 22, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;red&amp;rsquo;, 2, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 5, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 31, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 14, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 12, &amp;lsquo;square&amp;rsquo;]]</description>
+    </item>
+    
     <item>
       <title>Standard Error v. Standard Deviation</title>
       <link>http://datascienceforbabies.com/posts/standard-error-v-standard-deviation/</link>
@@ -43,7 +54,7 @@ Optimization</description>
       <description>Hello! Here is the first ever post on datascienceforbabies.com!!
 Above is a test of inserting an image.
 # break dataframes into test and training - this way the test data is completely new (80/20 split) aqu_train = aqu.sample(frac=0.8, random_state=25) aqu_test = aqu.drop(aqu_train.index) bel_train = bel.sample(frac=0.8, random_state=25) bel_test = bel.drop(bel_train.index) sar_train = sar.sample(frac=.8, random_state=25) sar_test = sar.drop(sar_train.index) Above is a test of inserting code.
-- numpy- matplotlibpyscript REPL (numpy and matplotlib are installed)import numpy as npfrom matplotlib import pyplot as pltprint(&#34;</description>
+- numpypyscript REPL (numpy is installed)import numpy as npprint(&#34;</description>
     </item>
     
   </channel>
