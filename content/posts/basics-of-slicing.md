@@ -12,7 +12,7 @@ tags:
   - pandas
 ---
 
-A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it's important to know how to select certain rows, columns, or cells. For example, when working with a big dataset of real estate sales in the last year, you might want to select only the first 100 rows, or only a few particular columns. This article will explain the basic syntax of slicing rows. To learn how to slice rows and columns at the same time, see my next article called 'Basics of Slicing Columns with Pandas.' To follow along with my code, you can copy and paste my code into the browser editor at the bottom of this page, or run on your machine.
+Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it's important to know how to select certain rows, columns, or cells. For example, when working with a big dataset of real estate sales in the last year, you might want to select only the first 100 rows, or only a few particular columns. This article will explain the basic syntax of slicing rows. To learn how to slice rows and columns at the same time, see my next article called 'Basics of Slicing Columns with Pandas.' To follow along with my code, you can copy and paste my code into the browser editor at the bottom of this page, or run on your machine.
 
 For the purposes of this article, I'll be demonstrating slicing with the pandas dataframe built with the following code. Note that you will need to install pandas as pd for this code to run correctly:
 
