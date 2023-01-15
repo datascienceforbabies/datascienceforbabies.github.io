@@ -9,14 +9,12 @@
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Thu, 17 Nov 2022 16:08:51 -0500</lastBuildDate><atom:link href="http://datascienceforbabies.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Basics of Slicing with Pandas</title>
+      <title>Basics of Slicing Rows with Pandas</title>
       <link>http://datascienceforbabies.com/posts/basics-of-slicing/</link>
       <pubDate>Thu, 17 Nov 2022 16:08:51 -0500</pubDate>
       
       <guid>http://datascienceforbabies.com/posts/basics-of-slicing/</guid>
-      <description>A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&amp;rsquo;s important to know how to index into a dataframe and subset the dataframe.
-For the purposes of this article, I&amp;rsquo;ll be demonstrating slicing with the following pandas dataframe:
-- numpy- pandaspyscript REPL (numpy and pandas are installed)import numpy as npimport pandas as pddata = [[&amp;lsquo;red&amp;rsquo;, 22, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;red&amp;rsquo;, 2, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 5, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 31, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 14, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 12, &amp;lsquo;square&amp;rsquo;]]</description>
+      <description>Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&amp;rsquo;s important to know how to select certain rows, columns, or cells. For example, when working with a big dataset of real estate sales in the last year, you might want to select only the first 100 rows, or only a few particular columns. This article will explain the basic syntax of slicing rows.</description>
     </item>
     
   </channel>

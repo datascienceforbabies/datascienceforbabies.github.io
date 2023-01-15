@@ -5,10 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&amp;rsquo;s important to know how to index into a dataframe and subset the dataframe.
-For the purposes of this article, I&amp;rsquo;ll be demonstrating slicing with the following pandas dataframe:
-- numpy- pandaspyscript REPL (numpy and pandas are installed)import numpy as npimport pandas as pddata = [[&amp;lsquo;red&amp;rsquo;, 22, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;red&amp;rsquo;, 2, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 5, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 31, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 14, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 12, &amp;lsquo;square&amp;rsquo;]]" />
-<meta name="keywords" content=", coding, data_science, rachel_grace_treene, python" />
+<meta name="description" content="Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&amp;rsquo;s important to know how to select certain rows, columns, or cells. For example, when working with a big dataset of real estate sales in the last year, you might want to select only the first 100 rows, or only a few particular columns. This article will explain the basic syntax of slicing rows." />
+<meta name="keywords" content=", coding, data_science, rachel_grace_treene, python, pandas" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="http://datascienceforbabies.com/posts/basics-of-slicing/" />
@@ -16,7 +14,7 @@ For the purposes of this article, I&amp;rsquo;ll be demonstrating slicing with t
 
     <title>
         
-            Basics of Slicing with Pandas :: Data Science for Babies  — Data Science, Statistics, and Computer Science help
+            Basics of Slicing Rows with Pandas :: Data Science for Babies  — Data Science, Statistics, and Computer Science help
         
     </title>
 
@@ -40,27 +38,21 @@ For the purposes of this article, I&amp;rsquo;ll be demonstrating slicing with t
     <meta name="msapplication-TileColor" content="">
 
 
-<meta itemprop="name" content="Basics of Slicing with Pandas">
-<meta itemprop="description" content="A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to index into a dataframe and subset the dataframe.
-For the purposes of this article, I&rsquo;ll be demonstrating slicing with the following pandas dataframe:
-- numpy- pandaspyscript REPL (numpy and pandas are installed)import numpy as npimport pandas as pddata = [[&lsquo;red&rsquo;, 22, &lsquo;round&rsquo;], [&lsquo;red&rsquo;, 2, &lsquo;square&rsquo;], [&lsquo;green&rsquo;, 5, &lsquo;round&rsquo;], [&lsquo;green&rsquo;, 31, &lsquo;square&rsquo;], [&lsquo;blue&rsquo;, 14, &lsquo;round&rsquo;], [&lsquo;blue&rsquo;, 12, &lsquo;square&rsquo;]]"><meta itemprop="datePublished" content="2022-11-17T16:08:51-05:00" />
+<meta itemprop="name" content="Basics of Slicing Rows with Pandas">
+<meta itemprop="description" content="Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to select certain rows, columns, or cells. For example, when working with a big dataset of real estate sales in the last year, you might want to select only the first 100 rows, or only a few particular columns. This article will explain the basic syntax of slicing rows."><meta itemprop="datePublished" content="2022-11-17T16:08:51-05:00" />
 <meta itemprop="dateModified" content="2022-11-17T16:08:51-05:00" />
-<meta itemprop="wordCount" content="244"><meta itemprop="image" content="http://datascienceforbabies.com"/>
-<meta itemprop="keywords" content="coding,data_science,rachel_grace_treene,python," />
+<meta itemprop="wordCount" content="691"><meta itemprop="image" content="http://datascienceforbabies.com"/>
+<meta itemprop="keywords" content="coding,data_science,rachel_grace_treene,python,pandas," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://datascienceforbabies.com"/>
 
-<meta name="twitter:title" content="Basics of Slicing with Pandas"/>
-<meta name="twitter:description" content="A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to index into a dataframe and subset the dataframe.
-For the purposes of this article, I&rsquo;ll be demonstrating slicing with the following pandas dataframe:
-- numpy- pandaspyscript REPL (numpy and pandas are installed)import numpy as npimport pandas as pddata = [[&lsquo;red&rsquo;, 22, &lsquo;round&rsquo;], [&lsquo;red&rsquo;, 2, &lsquo;square&rsquo;], [&lsquo;green&rsquo;, 5, &lsquo;round&rsquo;], [&lsquo;green&rsquo;, 31, &lsquo;square&rsquo;], [&lsquo;blue&rsquo;, 14, &lsquo;round&rsquo;], [&lsquo;blue&rsquo;, 12, &lsquo;square&rsquo;]]"/>
+<meta name="twitter:title" content="Basics of Slicing Rows with Pandas"/>
+<meta name="twitter:description" content="Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to select certain rows, columns, or cells. For example, when working with a big dataset of real estate sales in the last year, you might want to select only the first 100 rows, or only a few particular columns. This article will explain the basic syntax of slicing rows."/>
 
 
 
-    <meta property="og:title" content="Basics of Slicing with Pandas" />
-<meta property="og:description" content="A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to index into a dataframe and subset the dataframe.
-For the purposes of this article, I&rsquo;ll be demonstrating slicing with the following pandas dataframe:
-- numpy- pandaspyscript REPL (numpy and pandas are installed)import numpy as npimport pandas as pddata = [[&lsquo;red&rsquo;, 22, &lsquo;round&rsquo;], [&lsquo;red&rsquo;, 2, &lsquo;square&rsquo;], [&lsquo;green&rsquo;, 5, &lsquo;round&rsquo;], [&lsquo;green&rsquo;, 31, &lsquo;square&rsquo;], [&lsquo;blue&rsquo;, 14, &lsquo;round&rsquo;], [&lsquo;blue&rsquo;, 12, &lsquo;square&rsquo;]]" />
+    <meta property="og:title" content="Basics of Slicing Rows with Pandas" />
+<meta property="og:description" content="Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to select certain rows, columns, or cells. For example, when working with a big dataset of real estate sales in the last year, you might want to select only the first 100 rows, or only a few particular columns. This article will explain the basic syntax of slicing rows." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://datascienceforbabies.com/posts/basics-of-slicing/" /><meta property="og:image" content="http://datascienceforbabies.com"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-11-17T16:08:51-05:00" />
@@ -136,7 +128,7 @@ For the purposes of this article, I&rsquo;ll be demonstrating slicing with the f
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        2 minutes
+        4 minutes
 
         
       </p>
@@ -144,7 +136,7 @@ For the purposes of this article, I&rsquo;ll be demonstrating slicing with the f
 
     <article>
       <h1 class="post-title">
-        <a href="http://datascienceforbabies.com/posts/basics-of-slicing/">Basics of Slicing with Pandas</a>
+        <a href="http://datascienceforbabies.com/posts/basics-of-slicing/">Basics of Slicing Rows with Pandas</a>
       </h1>
 
       
@@ -154,8 +146,36 @@ For the purposes of this article, I&rsquo;ll be demonstrating slicing with the f
       
 
       <div class="post-content">
-        <p>A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to index into a dataframe and subset the dataframe.</p>
-<p>For the purposes of this article, I&rsquo;ll be demonstrating slicing with the following pandas dataframe:</p>
+        <p>Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to select certain rows, columns, or cells. For example, when working with a big dataset of real estate sales in the last year, you might want to select only the first 100 rows, or only a few particular columns. This article will explain the basic syntax of slicing rows. To learn how to slice rows and columns at the same time, see my next article called &lsquo;Basics of Slicing Columns with Pandas.&rsquo; To follow along with my code, you can copy and paste my code into the browser editor at the bottom of this page, or run on your machine.</p>
+<p>For the purposes of this article, I&rsquo;ll be demonstrating slicing with the pandas dataframe built with the following code. Note that you will need to install pandas as pd for this code to run correctly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#ae81ff">22</span>, <span style="color:#e6db74">&#39;round&#39;</span>], [<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;square&#39;</span>], [<span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;round&#39;</span>], [<span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#ae81ff">31</span>, <span style="color:#e6db74">&#39;square&#39;</span>], [<span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#ae81ff">14</span>, <span style="color:#e6db74">&#39;round&#39;</span>], [<span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#39;square&#39;</span>]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(data, columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Color&#39;</span>, <span style="color:#e6db74">&#39;Number&#39;</span>, <span style="color:#e6db74">&#39;Shape&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df</span></span></code></pre></div>
+<p>The easiest way to take a slice of a dataframe is with brackets, []. This action selects rows of a dataframe based on what you put in the brackets. To select a single row, say the row at index value 3, you would run the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#ae81ff">3</span>:<span style="color:#ae81ff">4</span>]</span></span></code></pre></div>
+<p>Notice that to display one row, I had to enter two values: 3 and 4, separated by a colon. Slicing typically requires 2 values. The first value, before the colon, represents the beginning index of the slice and is inclusive. The second value, after the colon, represents the ending index of the slice and is exclusive. So this slice only includes row 3.</p>
+<p>A slice that would include multiple rows with the same kind of syntax could be called with the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">5</span>]</span></span></code></pre></div>
+<p>This would return rows 2, 3, and 4.</p>
+<p>If you want to select all rows up until a certain index, specify the exclusive ending index, but don&rsquo;t put anything for the beginning index, like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[:<span style="color:#ae81ff">3</span>]</span></span></code></pre></div>
+<p>This will return rows 0, 1, and 2. To select all rows beginning at a certain index and all rows following, just do the opposite - specify the beginning index, but not the ending index:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#ae81ff">3</span>:]</span></span></code></pre></div>
+<p>This will return rows 3, 4, and 5.</p>
+<p>There is a third dimension to slicing, which can select rows according to a specific pattern within the beginning and ending indices. To do this, add a third number to the slicing command, like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>:<span style="color:#ae81ff">2</span>]</span></span></code></pre></div>
+<p>Without the added 2, we would expect rows 1, 2, 3, and 4 to be selected. However, now that we&rsquo;ve added the 2, the slicing command will select every other row within our specified range - that is, every 2 rows. So instead, we see rows 1 and 3. Here&rsquo;s another example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">6</span>:<span style="color:#ae81ff">3</span>]</span></span></code></pre></div>
+<p>The beginning and ending indices alone would actually return the whole dataframe. But with the added 3, the command selects every 3 rows, so this command returns rows 0 and 3.</p>
+<p>If we want to take every 3rd row from an entire dataframe, we don&rsquo;t have to specify the beginning and ending indices. Instead, we can run the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[::<span style="color:#ae81ff">3</span>]</span></span></code></pre></div>
+<p>This will give us what we want and is especially helpful when we&rsquo;re dealing with a bigger dataframe.</p>
+<p>With all of these commands, if we use negative numbers the code runs similarly, with one catch: now, it considers the last row to be at index 0, and works backwards. It will return rows in reverse order, too. For example, if I slice the entire dataframe with the repeating pattern set to -1 (essentially, selecting all rows beginning with the end of the dataframe) I will return the dataframe with its rows in reverse order. The command would look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]</span></span></code></pre></div>
+<p>See &lsquo;Basics of Slicing Columns with Pandas&rsquo; for taking slices that will specify rows and columns simultaneously.</p>
+<p>Source: <a href="https://pandas.pydata.org/docs/user_guide/indexing.html">https://pandas.pydata.org/docs/user_guide/indexing.html</a></p>
 <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 <link rel="stylesheet" href="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.css" />
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -170,34 +190,6 @@ For the purposes of this article, I&rsquo;ll be demonstrating slicing with the f
     <py-repl id="my-repl" auto-generate="true" std-out="output" std-err="output">
 import numpy as np
 import pandas as pd
-<p>data = [[&lsquo;red&rsquo;, 22, &lsquo;round&rsquo;], [&lsquo;red&rsquo;, 2, &lsquo;square&rsquo;], [&lsquo;green&rsquo;, 5, &lsquo;round&rsquo;], [&lsquo;green&rsquo;, 31, &lsquo;square&rsquo;], [&lsquo;blue&rsquo;, 14, &lsquo;round&rsquo;], [&lsquo;blue&rsquo;, 12, &lsquo;square&rsquo;]]</p>
-<p>df = pd.DataFrame(data, columns=[&lsquo;Color&rsquo;, &lsquo;Number&rsquo;, &lsquo;Shape&rsquo;])</p>
-<p>df
-</py-repl></p>
-  </div>
-  <div style="justify-content: right;display: flex;align-items: right;">
-    <button class="button_reset" type="button">Clear Output</button>
-  </div>
-  <b>Output:</b>
-  <div style="justify-content: center;display: flex;align-items: center;">
-    <div id="output" style="width: 100%;margin: 2rem;"></div>
-  </div>
-  <script src="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.js"></script>
-</div>
-<p>The easiest way to take a slice of a dataframe is with brackets, []. This action selects rows of a dataframe based on what you put in the brackets. To select a single row, say the row at index value 3, you would run the following command:</p>
-<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-<link rel="stylesheet" href="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.css" />
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<py-env>
-  - numpy
-  - pandas
-</py-env>
-<b>pyscript REPL (numpy and pandas are installed)</b>
-<br>
-<div>
-  <div>
-    <py-repl id="my-repl" auto-generate="true" std-out="output" std-err="output">
-df[3:4]
     </py-repl>
   </div>
   <div style="justify-content: right;display: flex;align-items: right;">
@@ -209,8 +201,6 @@ df[3:4]
   </div>
   <script src="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.js"></script>
 </div>
-<p>Notice that to display one row, I had to enter two values: 3 and 4, separated by a colon. Slicing typically requires 2 values. The first value, before the colon, represents the beginning index of the slice and is inclusive. The second value, after the colon, represents the ending index of the slice and is exclusive. This is why our result is only row 3, and not rows 3 and 4.</p>
-
       </div>
     </article>
 
@@ -225,6 +215,7 @@ df[3:4]
         <span class="tag"><a href="http://datascienceforbabies.com/tags/data_science/">data_science</a></span>
         <span class="tag"><a href="http://datascienceforbabies.com/tags/rachel_grace_treene/">rachel_grace_treene</a></span>
         <span class="tag"><a href="http://datascienceforbabies.com/tags/python/">python</a></span>
+        <span class="tag"><a href="http://datascienceforbabies.com/tags/pandas/">pandas</a></span>
         
     </p>
 
@@ -238,7 +229,7 @@ df[3:4]
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        244 Words
+        691 Words
       </p>
 
       <p>
@@ -277,7 +268,7 @@ df[3:4]
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Basics%20of%20Slicing%20with%20Pandas&amp;caption=Basics%20of%20Slicing%20with%20Pandas&amp;canonicalUrl=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Basics%20of%20Slicing%20Rows%20with%20Pandas&amp;caption=Basics%20of%20Slicing%20Rows%20with%20Pandas&amp;canonicalUrl=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
   <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
     <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
@@ -286,7 +277,7 @@ df[3:4]
 </a>
 
 
-<a class="resp-sharing-button__link" href="mailto:?subject=Basics%20of%20Slicing%20with%20Pandas&amp;body=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+<a class="resp-sharing-button__link" href="mailto:?subject=Basics%20of%20Slicing%20Rows%20with%20Pandas&amp;body=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
   <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
     </div>
@@ -294,7 +285,7 @@ df[3:4]
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f&amp;media=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f;description=Basics%20of%20Slicing%20with%20Pandas" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f&amp;media=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f;description=Basics%20of%20Slicing%20Rows%20with%20Pandas" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
   <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
     </div>
@@ -302,7 +293,7 @@ df[3:4]
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f&amp;title=Basics%20of%20Slicing%20with%20Pandas&amp;summary=Basics%20of%20Slicing%20with%20Pandas&amp;source=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f&amp;title=Basics%20of%20Slicing%20Rows%20with%20Pandas&amp;summary=Basics%20of%20Slicing%20Rows%20with%20Pandas&amp;source=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
   <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
     </div>
@@ -310,7 +301,7 @@ df[3:4]
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f&amp;resubmit=true&amp;title=Basics%20of%20Slicing%20with%20Pandas" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f&amp;resubmit=true&amp;title=Basics%20of%20Slicing%20Rows%20with%20Pandas" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
   <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
     </div>
@@ -318,7 +309,7 @@ df[3:4]
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f;title=Basics%20of%20Slicing%20with%20Pandas" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f;title=Basics%20of%20Slicing%20Rows%20with%20Pandas" target="_blank" rel="noopener" aria-label="" title="Share on xing">
   <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
     </div>
@@ -326,7 +317,7 @@ df[3:4]
 </a>
 
 
-<a class="resp-sharing-button__link" href="whatsapp://send?text=Basics%20of%20Slicing%20with%20Pandas%20http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+<a class="resp-sharing-button__link" href="whatsapp://send?text=Basics%20of%20Slicing%20Rows%20with%20Pandas%20http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
   <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </div>
@@ -334,7 +325,7 @@ df[3:4]
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f&amp;t=Basics%20of%20Slicing%20with%20Pandas" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f&amp;t=Basics%20of%20Slicing%20Rows%20with%20Pandas" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
   <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
     </div>
@@ -342,7 +333,7 @@ df[3:4]
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Basics%20of%20Slicing%20with%20Pandas&amp;url=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Basics%20of%20Slicing%20Rows%20with%20Pandas&amp;url=http%3a%2f%2fdatascienceforbabies.com%2fposts%2fbasics-of-slicing%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
   <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
     </div>
