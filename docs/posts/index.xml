@@ -10,16 +10,42 @@
         <atom:link href="http://datascienceforbabies.com/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Basics of Slicing with Pandas</title>
+            <title>Basics of Slicing Rows with Pandas</title>
             <link>http://datascienceforbabies.com/posts/basics-of-slicing/</link>
             <pubDate>Thu, 17 Nov 2022 16:08:51 -0500</pubDate>
             
             <guid>http://datascienceforbabies.com/posts/basics-of-slicing/</guid>
-            <description>A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&amp;rsquo;s important to know how to index into a dataframe and subset the dataframe.
-For the purposes of this article, I&amp;rsquo;ll be demonstrating slicing with the following pandas dataframe:
-- numpy- pandaspyscript REPL (numpy and pandas are installed)import numpy as npimport pandas as pddata = [[&amp;lsquo;red&amp;rsquo;, 22, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;red&amp;rsquo;, 2, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 5, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;green&amp;rsquo;, 31, &amp;lsquo;square&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 14, &amp;lsquo;round&amp;rsquo;], [&amp;lsquo;blue&amp;rsquo;, 12, &amp;lsquo;square&amp;rsquo;]]</description>
-            <content type="html"><![CDATA[<p>A coding topic that is very helpful for data science work is slicing. Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to index into a dataframe and subset the dataframe.</p>
-<p>For the purposes of this article, I&rsquo;ll be demonstrating slicing with the following pandas dataframe:</p>
+            <description>Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&amp;rsquo;s important to know how to select certain rows, columns, or cells. For example, when working with a big dataset of real estate sales in the last year, you might want to select only the first 100 rows, or only a few particular columns. This article will explain the basic syntax of slicing rows.</description>
+            <content type="html"><![CDATA[<p>Data scientists need to have a great understanding of slicing into dataframes because when working with large amounts of data, it&rsquo;s important to know how to select certain rows, columns, or cells. For example, when working with a big dataset of real estate sales in the last year, you might want to select only the first 100 rows, or only a few particular columns. This article will explain the basic syntax of slicing rows. To learn how to slice rows and columns at the same time, see my next article called &lsquo;Basics of Slicing Columns with Pandas.&rsquo; To follow along with my code, you can copy and paste my code into the browser editor at the bottom of this page, or run on your machine.</p>
+<p>For the purposes of this article, I&rsquo;ll be demonstrating slicing with the pandas dataframe built with the following code. Note that you will need to install pandas as pd for this code to run correctly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#ae81ff">22</span>, <span style="color:#e6db74">&#39;round&#39;</span>], [<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;square&#39;</span>], [<span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;round&#39;</span>], [<span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#ae81ff">31</span>, <span style="color:#e6db74">&#39;square&#39;</span>], [<span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#ae81ff">14</span>, <span style="color:#e6db74">&#39;round&#39;</span>], [<span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#39;square&#39;</span>]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(data, columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Color&#39;</span>, <span style="color:#e6db74">&#39;Number&#39;</span>, <span style="color:#e6db74">&#39;Shape&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df</span></span></code></pre></div>
+<p>The easiest way to take a slice of a dataframe is with brackets, []. This action selects rows of a dataframe based on what you put in the brackets. To select a single row, say the row at index value 3, you would run the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#ae81ff">3</span>:<span style="color:#ae81ff">4</span>]</span></span></code></pre></div>
+<p>Notice that to display one row, I had to enter two values: 3 and 4, separated by a colon. Slicing typically requires 2 values. The first value, before the colon, represents the beginning index of the slice and is inclusive. The second value, after the colon, represents the ending index of the slice and is exclusive. So this slice only includes row 3.</p>
+<p>A slice that would include multiple rows with the same kind of syntax could be called with the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">5</span>]</span></span></code></pre></div>
+<p>This would return rows 2, 3, and 4.</p>
+<p>If you want to select all rows up until a certain index, specify the exclusive ending index, but don&rsquo;t put anything for the beginning index, like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[:<span style="color:#ae81ff">3</span>]</span></span></code></pre></div>
+<p>This will return rows 0, 1, and 2. To select all rows beginning at a certain index and all rows following, just do the opposite - specify the beginning index, but not the ending index:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#ae81ff">3</span>:]</span></span></code></pre></div>
+<p>This will return rows 3, 4, and 5.</p>
+<p>There is a third dimension to slicing, which can select rows according to a specific pattern within the beginning and ending indices. To do this, add a third number to the slicing command, like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>:<span style="color:#ae81ff">2</span>]</span></span></code></pre></div>
+<p>Without the added 2, we would expect rows 1, 2, 3, and 4 to be selected. However, now that we&rsquo;ve added the 2, the slicing command will select every other row within our specified range - that is, every 2 rows. So instead, we see rows 1 and 3. Here&rsquo;s another example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">6</span>:<span style="color:#ae81ff">3</span>]</span></span></code></pre></div>
+<p>The beginning and ending indices alone would actually return the whole dataframe. But with the added 3, the command selects every 3 rows, so this command returns rows 0 and 3.</p>
+<p>If we want to take every 3rd row from an entire dataframe, we don&rsquo;t have to specify the beginning and ending indices. Instead, we can run the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[::<span style="color:#ae81ff">3</span>]</span></span></code></pre></div>
+<p>This will give us what we want and is especially helpful when we&rsquo;re dealing with a bigger dataframe.</p>
+<p>With all of these commands, if we use negative numbers the code runs similarly, with one catch: now, it considers the last row to be at index 0, and works backwards. It will return rows in reverse order, too. For example, if I slice the entire dataframe with the repeating pattern set to -1 (essentially, selecting all rows beginning with the end of the dataframe) I will return the dataframe with its rows in reverse order. The command would look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]</span></span></code></pre></div>
+<p>See &lsquo;Basics of Slicing Columns with Pandas&rsquo; for taking slices that will specify rows and columns simultaneously.</p>
+<p>Source: <a href="https://pandas.pydata.org/docs/user_guide/indexing.html">https://pandas.pydata.org/docs/user_guide/indexing.html</a></p>
 <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 <link rel="stylesheet" href="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.css" />
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -34,34 +60,6 @@ For the purposes of this article, I&amp;rsquo;ll be demonstrating slicing with t
     <py-repl id="my-repl" auto-generate="true" std-out="output" std-err="output">
 import numpy as np
 import pandas as pd
-<p>data = [[&lsquo;red&rsquo;, 22, &lsquo;round&rsquo;], [&lsquo;red&rsquo;, 2, &lsquo;square&rsquo;], [&lsquo;green&rsquo;, 5, &lsquo;round&rsquo;], [&lsquo;green&rsquo;, 31, &lsquo;square&rsquo;], [&lsquo;blue&rsquo;, 14, &lsquo;round&rsquo;], [&lsquo;blue&rsquo;, 12, &lsquo;square&rsquo;]]</p>
-<p>df = pd.DataFrame(data, columns=[&lsquo;Color&rsquo;, &lsquo;Number&rsquo;, &lsquo;Shape&rsquo;])</p>
-<p>df
-</py-repl></p>
-  </div>
-  <div style="justify-content: right;display: flex;align-items: right;">
-    <button class="button_reset" type="button">Clear Output</button>
-  </div>
-  <b>Output:</b>
-  <div style="justify-content: center;display: flex;align-items: center;">
-    <div id="output" style="width: 100%;margin: 2rem;"></div>
-  </div>
-  <script src="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.js"></script>
-</div>
-<p>The easiest way to take a slice of a dataframe is with brackets, []. This action selects rows of a dataframe based on what you put in the brackets. To select a single row, say the row at index value 3, you would run the following command:</p>
-<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-<link rel="stylesheet" href="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.css" />
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<py-env>
-  - numpy
-  - pandas
-</py-env>
-<b>pyscript REPL (numpy and pandas are installed)</b>
-<br>
-<div>
-  <div>
-    <py-repl id="my-repl" auto-generate="true" std-out="output" std-err="output">
-df[3:4]
     </py-repl>
   </div>
   <div style="justify-content: right;display: flex;align-items: right;">
@@ -72,9 +70,7 @@ df[3:4]
     <div id="output" style="width: 100%;margin: 2rem;"></div>
   </div>
   <script src="https://raw.githubusercontent.com/Cat-Computing-Universe/PyLab/main/demo/demo.js"></script>
-</div>
-<p>Notice that to display one row, I had to enter two values: 3 and 4, separated by a colon. Slicing typically requires 2 values. The first value, before the colon, represents the beginning index of the slice and is inclusive. The second value, after the colon, represents the ending index of the slice and is exclusive. This is why our result is only row 3, and not rows 3 and 4.</p>
-]]></content>
+</div>]]></content>
         </item>
         
         <item>
