@@ -1,7 +1,7 @@
 ---
 title: "Basics of Slicing Rows with Pandas"
 date: 2022-11-17T16:08:51-05:00
-draft: true
+draft: false
 toc: false
 images:
 tags:
